@@ -1,0 +1,19 @@
+Orders columns:
+('order_id', 'int', 'NO', 'PRI', None, 'auto_increment')
+('user_id', 'int', 'NO', 'MUL', None, '')
+('total_amount', 'int', 'NO', '', None, '')
+('delivery_address', 'text', 'NO', '', None, '')
+('payment_status', "enum('pending','paid','failed')", 'YES', '', 'pending', '')
+('order_status', "enum('placed','shipped','delivered')", 'YES', '', 'placed', '')
+('created_at', 'timestamp', 'YES', '', 'CURRENT_TIMESTAMP', 'DEFAULT_GENERATED')
+
+Users columns:
+('id', 'int', 'NO', 'PRI', None, 'auto_increment')
+('name', 'varchar(100)', 'NO', '', None, '')
+('email', 'varchar(150)', 'NO', 'UNI', None, '')
+('password', 'varchar(255)', 'NO', '', None, '')
+('gender', "enum('men','women','other')", 'YES', '', None, '')
+('size', 'varchar(5)', 'YES', '', None, '')
+('address', 'text', 'YES', '', None, '')
+('preferences', 'json', 'YES', '', None, '')
+('created_at', 'timestamp', 'YES', '', 'CURRENT_TIMESTAMP', 'DEFAULT_GENERATED')
