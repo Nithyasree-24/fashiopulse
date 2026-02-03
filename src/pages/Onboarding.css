@@ -1,0 +1,218 @@
+.onboarding-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.onboarding-card {
+    background: #fff;
+    width: 90%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(237, 255, 85, 0.2);
+    animation: scaleIn 0.4s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.onboarding-header h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.onboarding-header p {
+    color: #666;
+    font-size: 1rem;
+}
+
+.onboarding-steps {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    gap: 15px;
+}
+
+.step-indicator {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    color: #888;
+    transition: 0.3s;
+}
+
+.step-indicator.active {
+    background: #edff55;
+    color: #000;
+}
+
+.step-line {
+    width: 40px;
+    height: 2px;
+    background: #f0f0f0;
+}
+
+.step-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.gender-options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.gender-btn {
+    flex: 1;
+    padding: 20px;
+    border: 2px solid #eee;
+    background: #fff;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gender-btn:hover {
+    border-color: #000;
+    transform: translateY(-5px);
+}
+
+.gender-btn.selected {
+    background: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+.size-options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.size-btn {
+    padding: 15px 0;
+    border: 1px solid #eee;
+    background: #fdfdfd;
+    border-radius: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.size-btn:hover {
+    background: #f0f0f0;
+}
+
+.size-btn.selected {
+    background: #edff55;
+    color: #000;
+    border-color: #000;
+}
+
+.save-onboarding-btn {
+    width: 100%;
+    padding: 18px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.save-onboarding-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+}
+
+.category-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.cat-chip {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.cat-chip:hover {
+    background: #f8f9fa;
+    border-color: #000;
+}
+
+.cat-chip.selected {
+    background: #edff55;
+    color: #000;
+    border-color: #000;
+}
+
+.back-link {
+    display: block;
+    margin: 20px auto 0;
+    background: none;
+    border: none;
+    color: #888;
+    text-decoration: underline;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.back-link:hover {
+    color: #000;
+}
+
+.fade-in {
+    animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
