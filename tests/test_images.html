@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Image Test</title>
+    <style>
+        img {
+            width: 200px;
+            margin: 10px;
+            border: 2px solid #ccc;
+        }
+
+        .working {
+            border-color: green;
+        }
+
+        .broken {
+            border-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Testing Django Media Serving</h1>
+    <p>If images load = ✅ Django media serving works</p>
+    <p>If images don't load = ❌ Issue with Django server or paths</p>
+
+    <div>
+        <h3>Test Images:</h3>
+        <img src="http://localhost:8000/media/uploads/product_1.jpg" onload="this.className='working'"
+            onerror="this.className='broken'" />
+        <img src="http://localhost:8000/media/uploads/product_2.jpg" onload="this.className='working'"
+            onerror="this.className='broken'" />
+        <img src="http://localhost:8000/media/uploads/product_10.jpg" onload="this.className='working'"
+            onerror="this.className='broken'" />
+        <img src="http://localhost:8000/media/uploads/product_201.jpg" onload="this.className='working'"
+            onerror="this.className='broken'" />
+    </div>
+
+    <h3>Instructions:</h3>
+    <ol>
+        <li>Open this file in your browser: file:///C:/Users/mnith/Documents/fashiopulsee_ai/backend/test_images.html
+        </li>
+        <li>If images show with GREEN border = Django serving works!</li>
+        <li>If images show with RED border = Problem with Django</li>
+    </ol>
+</body>
+
+</html>
